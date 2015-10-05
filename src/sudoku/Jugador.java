@@ -73,7 +73,7 @@ public class Jugador{
     }
     
     public boolean ejecutarBC(Tablero tablero){
-        /*int fila, columna;
+        int fila, columna;
         if(!siguiente(tablero))
             return true;
         fila = x;
@@ -86,7 +86,7 @@ public class Jugador{
                     return true; 
                 tablero.setCasilla(0,fila,columna);
             }
-        }*/
+        }
         return false;
         
     }
@@ -151,29 +151,18 @@ public class Jugador{
         return conjunto;        
     }
     
-    public boolean ejecutarAC(Tablero tablero)
-    {
-        //Prueba Nodo
-        /*Nodo nodo1 = new Nodo(8,4,3,5);
-        Nodo nodo2 = new Nodo(3,5,8,4);
-        Nodo nodo3 = new Nodo(8,1,3,5);
-        Nodo nodo4 = new Nodo(nodo1);
-        System.out.println(nodo1);
-        System.out.println(nodo2);
-        System.out.println(nodo3);
-        System.out.println(nodo4);
-        if(nodo1.equals(nodo4) && !(nodo1.equals(nodo3)) && nodo1.equals(nodo4))
-            System.out.println("Equals correcto");
-        else
-            System.out.println("Equals incorrecto");*/
-        /*
-        */
-        //Prueba generarConjunto
-        /*List<Nodo> conjunto = conjuntoQ(tablero);
-        for(Nodo nodo : conjunto){
-            System.out.println(nodo);
-        }*/
+    public boolean ejecutarAC(Tablero tablero){
         
+        List<Nodo> conjunto = conjuntoQ(tablero);
+        boolean cambio = false;
+        
+        while(!conjunto.isEmpty()){
+            //<Vk,Vm> seleccionar y borrar
+            Nodo nodoTratado = conjunto.get(0);
+            conjunto.remove(0);
+            
+            
+        }
         return true;
     }
 }
